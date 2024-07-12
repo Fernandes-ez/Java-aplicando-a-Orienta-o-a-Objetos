@@ -1,6 +1,9 @@
+package ProjetoPrincipal;
+
 public class Filme {
     String nome;
-    int anoDeLancamento, totalDeAvaliacoes, duracaoEmMinutos;
+    int anoDeLancamento, duracaoEmMinutos;
+    private int totalDeAvaliacoes;
     boolean incluidoNoPlano;
     double somaDasAvaliacoes;
 
@@ -13,6 +16,9 @@ public class Filme {
     void avalia(double nota){
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
+    }
+    int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
     }
     double mediaAvaliacoes(){
         return somaDasAvaliacoes / totalDeAvaliacoes;
