@@ -1,26 +1,25 @@
 package ProjetoPrincipal;
 
-public class Filme {
-    String nome;
-    int anoDeLancamento, duracaoEmMinutos;
-    private int totalDeAvaliacoes;
-    boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
+public class Filme extends Titulo{
+    private int duracaoEmMinutos;
+    private String dirtetor;
 
-    void exibeFichaTecnica(){
-        System.out.println("Título:" + nome);
-        System.out.println("Ano de lançamento:" + anoDeLancamento);
-        System.out.println("Duração:" + duracaoEmMinutos + " minutos");
-        System.out.println("Avaliação:" + somaDasAvaliacoes);
+    public String getDirtetor() {
+        return dirtetor;
     }
-    void avalia(double nota){
-        somaDasAvaliacoes += nota;
-        totalDeAvaliacoes++;
+
+    public void setDirtetor(String dirtetor) {
+        this.dirtetor = dirtetor;
     }
-    int getTotalDeAvaliacoes(){
-        return totalDeAvaliacoes;
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
     }
-    double mediaAvaliacoes(){
-        return somaDasAvaliacoes / totalDeAvaliacoes;
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
+    void fichaTecnicaFilme(){
+        System.out.println("Duração: "+duracaoEmMinutos+" minutos");
+    }
+
+
 }

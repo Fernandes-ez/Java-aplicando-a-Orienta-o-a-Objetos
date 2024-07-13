@@ -27,10 +27,13 @@ public class Teste {
 
         PorschePanamera.FichaTecnica();
 
-        Aluno Cleriton = new Aluno();
-        Cleriton.nome = "Cleriton";
-        Cleriton.idade = 20;
-
-        Cleriton.FichaTecnica();
+        Aluno cleriton = new Aluno();
+        cleriton.setNome("Cleriton");
+        cleriton.idade = 20;
+        cleriton.darNota(8);
+        cleriton.darNota(9.5);
+        cleriton.darNota(5.3);
+        cleriton.FichaTecnica();
+        System.out.println("Média final: "+cleriton.calculaMedia());
     }
 }
