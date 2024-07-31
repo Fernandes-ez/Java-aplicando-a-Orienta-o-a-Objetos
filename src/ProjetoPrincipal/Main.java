@@ -1,7 +1,5 @@
 package ProjetoPrincipal;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -15,20 +13,22 @@ public class Main {
 
         meuFilme.exibeFichaTecnica();
         System.out.println("Total de avaliações: "+meuFilme.getTotalDeAvaliacoes());
-        meuFilme.fichaTecnicaFilme();
 
         Serie theBoys = new Serie();
         theBoys.setNome("The Boys");
         theBoys.setAnoDeLancamento(2019);
-        theBoys.setTemporada(4);
-        theBoys.setAtiva(theBoys.isAtiva());
+        theBoys.setTemporada(2);
+        theBoys.setAtiva(true);
         theBoys.setEpisodioPorTemporada(8);
+        theBoys.setMinutosPorEp(60);
+
 
         theBoys.avalia(9.5);
         theBoys.avalia(10);
-        theBoys.avalia(9.7);
+        theBoys.avalia(9.0);
 
         theBoys.exibeFichaTecnica();
         theBoys.fichaTecnicaSerie();
+        System.out.println("Tempo de maratona:"+theBoys.getDuracaoEmMinutos());
     }
 }
