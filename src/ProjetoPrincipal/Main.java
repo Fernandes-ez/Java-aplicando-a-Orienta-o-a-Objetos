@@ -1,5 +1,7 @@
 package ProjetoPrincipal;
 
+import CALCULOS.CalculadoraDeTempo;
+
 public class Main {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -13,6 +15,13 @@ public class Main {
 
         meuFilme.exibeFichaTecnica();
         System.out.println("Total de avaliações: "+meuFilme.getTotalDeAvaliacoes());
+
+        Filme avatar = new Filme();
+        avatar.setNome("Avatar");
+        avatar.setAnoDeLancamento(2012);
+        avatar.setDuracaoEmMinutos(200);
+
+
 
         Serie theBoys = new Serie();
         theBoys.setNome("The Boys");
@@ -30,5 +39,12 @@ public class Main {
         theBoys.exibeFichaTecnica();
         theBoys.fichaTecnicaSerie();
         System.out.println("Tempo de maratona:"+theBoys.getDuracaoEmMinutos());
+
+        CalculadoraDeTempo calcladora = new CalculadoraDeTempo();
+        calcladora.inclui(meuFilme);
+        calcladora.inclui(avatar);
+        calcladora.inclui(theBoys);
+        System.out.println(calcladora.getTempoTotal());
+
     }
 }
