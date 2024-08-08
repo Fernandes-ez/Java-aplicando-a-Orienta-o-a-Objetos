@@ -1,7 +1,5 @@
-package CALCULOS;
+package ProjetoPrincipal.CALCULOS;
 
-import ProjetoPrincipal.Filme;
-import ProjetoPrincipal.Serie;
 import ProjetoPrincipal.Titulo;
 
 public class CalculadoraDeTempo {

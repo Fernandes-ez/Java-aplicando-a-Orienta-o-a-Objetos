@@ -1,6 +1,8 @@
 package ProjetoPrincipal;
 
-public class Filme extends Titulo{
+import ProjetoPrincipal.CALCULOS.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
 
     private String dirtetor;
 
@@ -14,5 +16,10 @@ public class Filme extends Titulo{
 
     public void exibeFichaTecnica(){
         System.out.println("Título:" + getNome()+"\nAno de lançamento:" + getAnoDeLancamento()+"\nAvaliação:" + mediaAvaliacoes()+"\nDiretor:"+dirtetor+"\nDuração em minutos: "+getDuracaoEmMinutos()+" minutos");
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) mediaAvaliacoes() / 2;
     }
 }

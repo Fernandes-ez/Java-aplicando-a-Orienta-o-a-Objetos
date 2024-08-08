@@ -1,6 +1,7 @@
 package ProjetoPrincipal;
 
-import CALCULOS.CalculadoraDeTempo;
+import ProjetoPrincipal.CALCULOS.CalculadoraDeTempo;
+import ProjetoPrincipal.CALCULOS.FiltroRecomendacao;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,6 +46,16 @@ public class Main {
         calcladora.inclui(avatar);
         calcladora.inclui(theBoys);
         System.out.println(calcladora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNome("Piloto");
+        episodio.setNumero(1);
+        episodio.setSerie(theBoys);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
 
     }
 }
