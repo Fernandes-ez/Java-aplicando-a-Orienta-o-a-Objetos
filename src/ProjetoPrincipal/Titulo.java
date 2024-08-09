@@ -16,6 +16,9 @@ public class Titulo {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
+
+//     Getters e Setters
+
     int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
